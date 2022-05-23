@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :bigint           not null, primary key
+#  icon       :string           not null
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  author_id  :bigint           not null
+#
+# Indexes
+#
+#  index_categories_on_author_id  (author_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (author_id => users.id)
+#
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
