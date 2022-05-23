@@ -25,9 +25,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) do
-    FactoryBot.create(:user, name: 'Adam')
-  end
+  user = User.first
 
   describe 'validate data' do
     it 'name should be present' do

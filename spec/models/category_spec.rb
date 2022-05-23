@@ -20,7 +20,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  let(:user) { FactoryBot.create(:user, name: 'Adama') }
+  user = User.first
   let(:category) do
     FactoryBot.create(:category,
                       name: 'Housing',

@@ -20,7 +20,7 @@
 require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
-  let(:user) { FactoryBot.create(:user, name: 'Adama') }
+  user = User.first
   let(:expense) do
     FactoryBot.create(:expense,
                       name: 'Beef cheese toast',
