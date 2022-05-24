@@ -1,31 +1,39 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
-  describe 'GET /index' do
+  User.delete_all
+  let(:user) { FactoryBot.create(:user, :confirmed) }
+  let(:category) { FactoryBot.create(:category, author: user) }
+
+  describe 'GET /categories' do
+    before :example do
+      sign_in user
+
+      get categories_path
+    end
+
     it 'returns http success' do
-      get '/categories/index'
       expect(response).to have_http_status(:success)
+    end
+
+    it 'should render index view' do
+      expect(response).to render_template(:index)
     end
   end
 
-  describe 'GET /new' do
+  describe 'GET /expenses/new' do
+    before :example do
+      sign_in user
+
+      get new_category_path
+    end
+
     it 'returns http success' do
-      get '/categories/new'
       expect(response).to have_http_status(:success)
     end
-  end
 
-  describe 'GET /create' do
-    it 'returns http success' do
-      get '/categories/create'
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe 'GET /destroy' do
-    it 'returns http success' do
-      get '/categories/destroy'
-      expect(response).to have_http_status(:success)
+    it 'should render add new category view' do
+      expect(response).to render_template(:new)
     end
   end
 end

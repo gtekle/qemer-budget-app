@@ -63,6 +63,8 @@ group :development, :test do
 
   gem 'rspec-rails'
 
+  gem 'rails-controller-testing'
+
   # Rails integration for factory_bot, a replacement for fixtures
   gem 'factory_bot_rails'
 end
