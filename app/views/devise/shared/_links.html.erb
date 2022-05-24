@@ -1,5 +1,6 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name) %>
+  <%= link_to "Log in", new_session_path(resource_name),
+  class: "nav-link px-0" %>
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
