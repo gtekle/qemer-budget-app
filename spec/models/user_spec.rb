@@ -25,7 +25,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  user = User.first
+  User.delete_all
+  let(:user) { FactoryBot.create(:user, :confirmed) }
 
   describe 'validate data' do
     it 'name should be present' do

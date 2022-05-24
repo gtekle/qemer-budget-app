@@ -20,7 +20,8 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  user = User.first
+  User.delete_all
+  let(:user) { FactoryBot.create(:user, :confirmed) }
   let(:category) do
     FactoryBot.create(:category,
                       name: 'Housing',
