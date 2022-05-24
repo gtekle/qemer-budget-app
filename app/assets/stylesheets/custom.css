@@ -1,0 +1,23 @@
+@font-face {
+  font-family: proxima-nova;
+  src: url(../fonts/proxima-nova/Proxima-Nova-Light.otf);
+}
+
+@font-face {
+  font-family: proxima-nova;
+  src: url(../fonts/proxima-nova/Proxima-Nova-Light.otf);
+  font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+
+body {
+  font-family: "proxima-nova", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.custom_splash_title {
+  font-family: 'Smooch', cursive;
+  font-size: 48px;
+  font-weight: bold;
+  color: #434b54;
+}
