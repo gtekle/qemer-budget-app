@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'LoginPages', type: :system do
+  Category.delete_all
   User.delete_all
   let(:user) { FactoryBot.create(:user, :confirmed) }
 
