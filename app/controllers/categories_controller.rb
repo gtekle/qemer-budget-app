@@ -1,7 +1,13 @@
 class CategoriesController < ApplicationController
   load_and_authorize_resource
+  include CategoriesHelper
 
-  def index; end
+  def index
+    @categories = Category.where(author: current_user)
+    @total_category_expenses = category_expense(@categories)
+  end
+
+  def show; end
 
   def new
     @category = Category.new
