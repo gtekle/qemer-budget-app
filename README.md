@@ -2,7 +2,7 @@
 
 # Qemer Budget App
 
-> Develop knowledge on Ruby and RoR by creating a recipe application where you can login, add and browse recipes, and buy inventory goods.
+> This project is built as part of the Microverse Full-stack software development training to develop knowledge on Ruby and Ruby on Rails by creating a mobile web application where you can login and manage your expenses. You can also categorize expenses into different categories.
 
 This project is made as part of Microverse program.
 
@@ -10,10 +10,11 @@ This project is made as part of Microverse program.
 
 - RUBY
 - RAILS
+- Bootstrap 5
 
 ## Live Demo
 
-[coming soon](https://livedemo.com)
+[Live link](https://qemer-budget-app.herokuapp.com/)
 
 ## Getting Started
 
