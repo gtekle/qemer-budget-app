@@ -25,7 +25,7 @@ class ExpenseCategory < ApplicationRecord
   def self.save_category(category, expense)
     @expense_category = ExpenseCategory.new(category: category, expense: expense)
     return true if @expense_category.save
-      
-    return false
+
+    false
   end
 end

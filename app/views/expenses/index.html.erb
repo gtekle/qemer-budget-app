@@ -9,7 +9,7 @@
 
   <div title="Add expense" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
     <%= link_to new_expense_path(prev_category_id: @category)  do %>
-      <i class="bi bi-plus-circle-fill"></i>
+      <i class="bi bi-plus-circle-fill text-success"></i>
     <% end%>
   </div>
   <% if @expenses.present? %>
@@ -24,11 +24,13 @@
     <ul class="list-group mx-0 mt-3">
       <% @expenses.each do |expense| %>
         <li class="bg-white my-1 border px-2">
-          <div class="d-flex justify-content-between align-items-center py-2">
-            <h4 class="m-0"><b><%= expense.name %></b></h4>
-            <p class="m-0"><%= expense.amount %></p>
-          </div>
-          <p class="card-text"><%= expense.created_at.strftime('%d %b %Y') %></p>
+          <%= link_to expense_path(expense), class: "text-secondary nav-link" do %>
+            <div class="d-flex justify-content-between align-items-center py-2">
+              <h4 class="m-0"><b><%= expense.name %></b></h4>
+              <p class="m-0"><%= number_to_currency(expense.amount, :unit => "$") %></p>
+            </div>
+            <p class="card-text"><%= expense.created_at.strftime('%d %b %Y') %></p>
+          <% end %>
         </li>
       <% end %>
     </ul>

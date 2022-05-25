@@ -8,7 +8,9 @@ class ExpensesController < ApplicationController
     @total_category_expense = total_category_expense(params[:category_id])
   end
 
-  def show; end
+  def show
+    @expense = Expense.find(params[:id])
+  end
 
   def new
     @expense = Expense.new

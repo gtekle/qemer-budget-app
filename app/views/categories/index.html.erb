@@ -7,7 +7,7 @@
 
   <div title="Add category" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
     <%= link_to new_category_path do %>
-      <i class="bi bi-plus-circle-fill"></i>
+      <i class="bi bi-plus-circle-fill text-success"></i>
     <% end%>
   </div>
 
@@ -17,7 +17,7 @@
         <%= link_to category_expenses_path(category), class: "nav-link  text-secondary p-0" do %>
           <li class="row bg-white my-1 border">
             <div class="d-flex flex-row gap-3 py-2">
-              <img src=<%= category.icon %> class="img-fluid" alt=<%= category.name %>>
+              <img src=<%= category.icon %> class="img-thumbnail" alt=<%= category.name %>>
               <div class="w-100">
                 <div class="d-flex flex-row justify-content-between align-items-center">
                   <p class="p-0"><%= category.name %></p>
