@@ -49,3 +49,13 @@ h6 {
 select.form-control {
   padding: 6px 0;
 }
+
+.bg-primary {
+  background-color: #3778c2 !important;
+  color: #fff;
+}
+
+.bg-success {
+  background-color: #5fb523 !important;
+  color: #fff;
+}
