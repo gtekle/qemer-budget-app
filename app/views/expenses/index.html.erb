@@ -24,7 +24,7 @@
     <ul class="list-group mx-0 mt-3">
       <% @expenses.each do |expense| %>
         <li class="bg-white my-1 border px-2">
-          <%= link_to expense_path(expense), class: "text-secondary nav-link" do %>
+          <%= link_to expense_path(expense), class: "text-secondary nav-link p-1" do %>
             <div class="d-flex justify-content-between align-items-center py-2">
               <h4 class="m-0"><b><%= expense.name %></b></h4>
               <p class="m-0"><%= number_to_currency(expense.amount, :unit => "$") %></p>
@@ -34,5 +34,9 @@
         </li>
       <% end %>
     </ul>
+  <% else %>
+    <div class="border-2">
+      <p class="bg-light text-center"> No expenses, yet! Please add expenses.</p>
+    </div>
   <% end %>
 </section>
