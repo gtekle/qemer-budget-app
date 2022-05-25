@@ -6,7 +6,7 @@
   </div>
 
   <div title="Add category" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
-    <%= link_to new_category_path do %>
+    <%= link_to new_category_path, id: 'add_new_category' do %>
       <i class="bi bi-plus-circle-fill text-success"></i>
     <% end%>
   </div>
@@ -14,7 +14,7 @@
   <% if @categories.present? %>
     <ul class="list-group mx-0 mt-3 px-2">
       <% @categories.each do |category|%>
-        <%= link_to category_expenses_path(category), class: "nav-link  text-secondary p-0" do %>
+        <%= link_to category_expenses_path(category), class: "nav-link  text-secondary p-0", id: "category_show#{category.id}" do %>
           <li class="row bg-white my-1 border">
             <div class="d-flex flex-row gap-3 py-2">
               <img src=<%= category.icon %> class="img-thumbnail" alt=<%= category.name %>>

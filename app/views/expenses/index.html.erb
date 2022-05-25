@@ -8,7 +8,7 @@
   </div>
 
   <div title="Add expense" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
-    <%= link_to new_expense_path(prev_category_id: @category)  do %>
+    <%= link_to new_expense_path(prev_category_id: @category), id: 'add_new_expense'  do %>
       <i class="bi bi-plus-circle-fill text-success"></i>
     <% end%>
   </div>

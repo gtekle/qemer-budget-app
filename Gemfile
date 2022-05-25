@@ -67,6 +67,9 @@ group :development, :test do
 
   # Rails integration for factory_bot, a replacement for fixtures
   gem 'factory_bot_rails'
+
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do

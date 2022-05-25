@@ -9,6 +9,13 @@
   </div>
   <div class="container d-flex flex-column align-items-stretch pt-4">
     <%= form_with model: @expense do |f| %>
+      <% if @expense.errors.any? %>
+        <div class="alert alert-danger mt-4" role="alert">
+          <% @expense.errors.full_messages.each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
+      <% end %>
       <div class="field form-group mb-3">
         <%= f.number_field :prev_category_id,
           class: "form-control",
@@ -27,7 +34,6 @@
       <div class="form-group py-2">
         <%= f.number_field :amount,
           step: 0.01,
-          autofocus: true,
           autocomplete: "amount",
           placeholder: "Amount",
           class: "form-control",
