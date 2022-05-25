@@ -21,4 +21,11 @@
 class ExpenseCategory < ApplicationRecord
   belongs_to :category
   belongs_to :expense
+
+  def self.save_category(category, expense)
+    @expense_category = ExpenseCategory.new(category: category, expense: expense)
+    return true if @expense_category.save
+
+    false
+  end
 end
