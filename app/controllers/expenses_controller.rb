@@ -25,7 +25,7 @@ class ExpensesController < ApplicationController
     if @expense.save
       redirect_to category_expenses_path(@prev_category), notice: 'Added expense successfully!'
     else
-      render :new, alert: 'Expense was not added!'
+      redirect_to new_expense_path(prev_category_id: @prev_category.id), alert: 'Expense was not added!'
     end
   end
 
