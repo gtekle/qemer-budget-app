@@ -18,8 +18,8 @@ RSpec.describe 'Categories', type: :system do
     user.confirm
 
     category = Category.new(name: 'Foods and Drinks',
-                     icon: 'category-icon',
-                     author: user)
+                            icon: 'category-icon',
+                            author: user)
     category.save
   end
 
@@ -46,10 +46,10 @@ RSpec.describe 'Categories', type: :system do
       visit categories_path
 
       find("[id='add_new_category']").click
-      
+
       expect(page).to have_current_path(new_category_path)
     end
-    
+
     it 'should click category and redirect to expenses list' do
       category = Category.first
       id = "category_show#{category.id}"

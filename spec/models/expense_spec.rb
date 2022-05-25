@@ -20,6 +20,7 @@
 require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
+  Category.delete_all
   User.delete_all
   let(:user) { FactoryBot.create(:user, :confirmed) }
   let(:expense) do

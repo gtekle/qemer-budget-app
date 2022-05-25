@@ -8,6 +8,13 @@
   </div>
   <div class="container d-flex flex-column align-items-stretch pt-4">
     <%= form_with model: @category do |f| %>
+      <% if @category.errors.any? %>
+        <div class="alert alert-danger mt-4" role="alert">
+          <% @category.errors.full_messages.each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
+      <% end %>
       <div class="form-group py-1">
         <%= f.text_field :name,
           autofocus: true,
