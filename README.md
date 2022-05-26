@@ -14,7 +14,8 @@ This project is made as part of Microverse program.
 
 ## Live Demo
 
-[Live link](https://qemer-budget-app.herokuapp.com/)
+- [Live link](https://qemer-budget-app.herokuapp.com/)
+- [Video Link](https://www.loom.com/share/4d3deef27a2b4f1699f62da3b9425bc1)
 
 ## Getting Started
 
