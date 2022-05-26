@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main class="mx-auto py-5 h-100 bg-light">
+      <%= render "shared/flash" %>
+      <%= yield %>
+    </main>
   </body>
 </html>
