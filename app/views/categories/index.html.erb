@@ -6,11 +6,14 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start gap-1">
             <li class="nav-item my-3">
               <%= link_to categories_path, class: "text-white nav-link text-bold" do %>
                 <i class="bi bi-house py-2"> Home</i>
               <% end%>
+            </li>
+            <li class="nav-item my-3">
+              <p class="m-0">User: <%= current_user.email %></p>
             </li>
             <li class="nav-item">
               <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning mb-1" %>
